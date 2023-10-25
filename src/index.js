@@ -15,6 +15,7 @@ app.use(express.json());
 //Rutas
 app.use(require("./routes"));
 app.use(require("./routes/singup"));
+app.use(require("./routes/login"));
 
 //Inicio de servidor
 app.listen(app.get("port"), () => {
