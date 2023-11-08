@@ -4,10 +4,18 @@ import { User } from "../interfaces/user.interface";
 const UserSchema = new Schema<User>(
   {
     name: {
-      required: true,
       type: String,
+      required: true,
     },
-    password: {
+    lastname: {
+      type: String,
+      required: true,
+    },
+    IdType: {
+      type: String,
+      required: true,
+    },
+    IdNumber: {
       type: String,
       required: true,
     },
@@ -16,9 +24,14 @@ const UserSchema = new Schema<User>(
       required: true,
       unique: true,
     },
-    description: {
+    password: {
       type: String,
-      default: "Soy la descripcion",
+      required: true,
+    },
+
+    Rol: {
+      type: Number,
+      default: 2,
     },
   },
   {
