@@ -17,6 +17,7 @@
     "express-mysql-session": "^3.0.0",
     "express-session": "^1.17.3",
     "express-validator": "^7.0.1",
+    "mongodb": "^6.2.0",
     "morgan": "^1.10.0",
     "mysql": "^2.18.1",
     "passport": "^0.6.0",
