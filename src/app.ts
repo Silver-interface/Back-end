@@ -6,7 +6,8 @@ import db from "./config/mongo";
 const PORT = process.env.PORT || 3001;
 const app = express();
 const corsOptions = {
-    allowedHeaders: ['Authorization'], // Agrega 'Authorization' a los encabezados permitidos
+    origin: 'https://front-end-opal-three.vercel.app',
+    allowedHeaders: ['Authorization', 'Content-Type'], // Agrega 'Authorization' a los encabezados permitidos
   };
 app.use(cors(corsOptions));
 app.use(cors());
