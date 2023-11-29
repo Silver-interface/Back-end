@@ -5,6 +5,10 @@ import { router } from "./routes";
 import db from "./config/mongo";
 const PORT = process.env.PORT || 3001;
 const app = express();
+const corsOptions = {
+    allowedHeaders: ['Authorization'], // Agrega 'Authorization' a los encabezados permitidos
+  };
+app.use(cors(corsOptions));
 app.use(cors());
 app.use(express.json());
 app.use(router);
