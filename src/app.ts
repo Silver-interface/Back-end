@@ -10,7 +10,6 @@ const corsOptions = {
     allowedHeaders: ['Authorization', 'Content-Type'], // Agrega 'Authorization' a los encabezados permitidos
   };
 app.use(cors(corsOptions));
-app.use(cors());
 app.use(express.json());
 app.use(router);
 db().then(() => console.log("Conexion Ready"));
