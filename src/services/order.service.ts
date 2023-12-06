@@ -1,4 +1,4 @@
-import { Car } from "../interfaces/car.interface";
+import { Car } from "../interfaces/ropa.interface";
 import ItemModel from "../models/item.model";
 
 const getOrders = async () => {
