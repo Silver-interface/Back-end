@@ -1,7 +1,7 @@
 import { Schema, model } from "mongoose";
-import { Car } from "../interfaces/car.interface";
+import { Ropa } from "../interfaces/ropa.interface";
 
-const ItemSchema = new Schema<Car>(
+const ItemSchema = new Schema<Ropa>(
   {
     name: {
       type: String,
@@ -11,13 +11,13 @@ const ItemSchema = new Schema<Car>(
       type: String,
       required: true,
     },
-    gas: {
+    type: {
       type: String,
-      enum: ["gasoline", "electric"],
+      enum: ["Camisa", "Camiseta"],
       required: true,
     },
-    year: {
-      type: Number,
+    talla: {
+      type: String,
       required: true,
     },
     description: {
