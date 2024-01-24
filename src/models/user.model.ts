@@ -31,7 +31,7 @@ const UserSchema = new Schema<User>(
 
     Rol: {
       type: Number,
-      default: 2,
+      default: 1,
     },
   },
   {

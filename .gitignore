@@ -3,3 +3,4 @@ storage/*
 !storage/.gitkeep
 .env
 dist/
+.vercel
