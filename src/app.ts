@@ -6,7 +6,11 @@ import { userRouter } from './routes/user';
 import db from "./config/mongo";
 const PORT = process.env.PORT || 3001;
 const app = express();
-app.use(cors());
+const corsOptions = {
+    origin: 'https://front-end-opal-three.vercel.app',
+    allowedHeaders: ['Authorization', 'Content-Type'], // Agrega 'Authorization' a los encabezados permitidos
+  };
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(router);
 app.use('/user', userRouter);
