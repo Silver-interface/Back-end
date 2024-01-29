@@ -1,8 +1,12 @@
-import { Schema, Types, model, Model } from "mongoose";
+import { Schema, Types, model } from "mongoose";
 import { User } from "../interfaces/user.interface";
 
 const UserSchema = new Schema<User>(
   {
+    _id: {
+      type: String,
+      auto: true,
+    },
     name: {
       type: String,
       required: true,
@@ -28,17 +32,16 @@ const UserSchema = new Schema<User>(
       type: String,
       required: true,
     },
-
     Rol: {
       type: Number,
-      default: 2,
+      default: 1,
     },
-  },
+  }, 
   {
     versionKey: false,
     timestamps: true,
   }
 );
 
-const UserModel = model("users", UserSchema);
+const UserModel = model<User>("users", UserSchema);
 export default UserModel;
