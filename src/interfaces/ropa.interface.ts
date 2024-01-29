@@ -1,7 +1,7 @@
-export interface Car {
+export interface Ropa {
   color: string;
-  gas: "gasoline" | "electric";
-  year: number;
+  type: "Camisas" | "Camisetas";
+  talla: string;
   description: string;
   price: number;
   name: string;
