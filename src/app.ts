@@ -4,13 +4,17 @@ import cors from "cors";
 import { router } from "./routes";
 import { userRouter } from './routes/user';
 import db from "./config/mongo";
-const PORT = process.env.PORT || 3001;
+
+
+
+
+const PORT = process.env.PORT || 3002;
 const app = express();
 const corsOptions = {
-    origin: 'https://front-end-opal-three.vercel.app',
+    origin: 'https://localhost:3002/',
     allowedHeaders: ['Authorization', 'Content-Type'], // Agrega 'Authorization' a los encabezados permitidos
   };
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(express.json());
 app.use(router);
 app.use('/user', userRouter);

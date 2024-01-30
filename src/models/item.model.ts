@@ -28,6 +28,8 @@ const ItemSchema = new Schema<Ropa>(
       type: Number,
       required: true,
     },
+  
+  
   },
   {
     timestamps: true,
