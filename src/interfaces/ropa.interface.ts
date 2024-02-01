@@ -1,8 +1,14 @@
+import { Double } from "mongodb";
+
+
 export interface Ropa {
-  color: string;
-  type: "Camisas" | "Camisetas";
-  talla: string;
-  description: string;
-  price: number;
+  image: string;
+  seccion: "Hombre" | "Mujer";
   name: string;
+  description: string;
+  brand: string;
+  color: [string];
+  size: object;
+  stock: number;
+  price: Number;
 }
