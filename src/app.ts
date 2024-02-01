@@ -11,7 +11,7 @@ import db from "./config/mongo";
 const PORT = process.env.PORT || 3002;
 const app = express();
 const corsOptions = {
-    origin: 'https://localhost:3002/',
+    origin: 'http://localhost:3002',
     allowedHeaders: ['Authorization', 'Content-Type'], // Agrega 'Authorization' a los encabezados permitidos
   };
 app.use(cors());

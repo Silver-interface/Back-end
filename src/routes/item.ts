@@ -10,7 +10,7 @@ import { logMiddleware } from "../middleware/log";
 
 const router = Router();
 
-router.get("/", getItems);
+router.get("/items", getItems);
 
 router.get("/:id", logMiddleware, getItem);
 
