@@ -1,7 +1,5 @@
 import { Schema, model } from "mongoose";
 import { Ropa } from "../interfaces/ropa.interface";
-import { Double } from "mongodb";
-
 
 const ItemSchema = new Schema<Ropa>(
   {

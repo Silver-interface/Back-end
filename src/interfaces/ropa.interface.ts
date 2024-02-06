@@ -1,5 +1,3 @@
-import { Double } from "mongodb";
-
 
 export interface Ropa {
   image: string;

@@ -2,12 +2,13 @@ import {Router} from "express";
 import { getUserInfo } from "../controllers/user.controller";
 import { checkJwt } from "../middleware/session";
 
-const userRouter = Router();
 
-userRouter.get("/InfoUser", checkJwt, (req, res) => {
-  //checjJwt se ejecutará antes de manejar la solicitud, verificanco autenticación del usuario mediante el token
-    console.log("Ruta /InfoUser alcanzada");
+const router = Router();
+
+router.get("/User", checkJwt, (req, res) => {
+  //checkJwt se ejecutará antes de manejar la solicitud, verificando autenticación del usuario mediante el token
+    console.log("Ruta /User alcanzada");
     getUserInfo(req, res); //pasa objetos de solicitud y respuesta
   });
 
-export {userRouter};
+export { router };
