@@ -3,10 +3,7 @@ import { User } from "../interfaces/user.interface";
 
 const UserSchema = new Schema<User>(
   {
-    _id: {
-      type: String,
-      auto: true,
-    },
+   
     name: {
       type: String,
       required: true,
